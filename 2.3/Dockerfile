@@ -47,6 +47,7 @@ COPY config ./config
 VOLUME /usr/share/elasticsearch/data
 
 COPY docker-entrypoint.sh /
+ADD elasticsearch-analysis-ik-1.9.3.zip /usr/share/elasticsearch/plugins/ik
 
 EXPOSE 9200 9300
 ENTRYPOINT ["/docker-entrypoint.sh"]
